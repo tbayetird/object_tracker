@@ -3,9 +3,13 @@
 ## Utilisation :
 Ce traqueur prend en entrée une liste de rectangles à update ((xmin,ymin,xmax,ymax)) sur une image.
 Il faut mettre à jour les nouvelles détections d'une image à une autre, donc réentrer une liste de détections et lancer la mise à jour des objets trackés.
+
+
 exemple :
 
-for i in range(len(y_pred_decoded)):
+
+    ot = ObjectTracker()
+    for i in range(len(y_pred_decoded)):
         img=orig_images[i]
         rects=[]
         for box in y_pred_decoded[i]:
